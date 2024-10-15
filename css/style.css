@@ -1,0 +1,127 @@
+/* Основные стили страницы */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Контейнер калькулятора */
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Уменьшили ширину контейнера */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Заголовок */
+h1 {
+    text-align: center;
+    font-size: 22px;
+    color: #00796b;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+/* Стиль для меток и полей ввода */
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    color: #004d40;
+}
+
+select, input {
+    width: 100%;
+    padding: 6px; /* Уменьшили размер padding */
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #80cbc4;
+    background-color: #e0f2f1;
+    font-size: 13px; /* Уменьшили размер шрифта */
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+select:focus, input:focus {
+    border-color: #26a69a;
+    background-color: #ffffff;
+    outline: none;
+}
+
+/* Кнопка для расчета */
+button {
+    width: 100%;
+    padding: 8px; /* Уменьшили размер padding */
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-top: 10px; /* Уменьшили отступ */
+    font-size: 14px; /* Уменьшили размер шрифта */
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #004d40;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Результат расчета */
+#result {
+    margin-top: 15px;
+    text-align: center;
+}
+
+#output {
+    font-weight: bold;
+    font-size: 18px;
+    color: #00796b;
+    padding: 8px;
+    border: 1px solid #004d40;
+    display: inline-block;
+    border-radius: 8px;
+    background-color: #e0f7fa;
+    transition: transform 0.3s ease;
+}
+
+#output.show {
+    animation: showResult 0.5s forwards;
+}
+
+@keyframes showResult {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Отступы для вводных полей */
+input, select {
+    margin-bottom: 10px; /* Уменьшили отступ */
+}
